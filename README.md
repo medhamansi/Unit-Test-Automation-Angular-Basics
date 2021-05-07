@@ -2,16 +2,14 @@
 
 #  UNIT TEST AUTOMATION IN ANGULAR
 
-1.  Create a new app – ***ng new app-testing***
-2.  ***cd app-testing***
-3.  ***ng serve -o***
+1.  Create a new app – 
+   ```ng new app-testing```
+2.  ```cd app-testing```
+3.  ```ng serve -o```
 4.  In the app.component.spec.ts file there are some already defined Unit Test cases in Jasmine.
     Jasmine is a JS library/framework for unit testing.
 5. To check our own test cases, we will create another component say - USER
-  ```
-    ng g c user
-    
-    ```
+  ``` ng g c user ```
     
 6.  Inside ***user.component.ts*** -
   ```

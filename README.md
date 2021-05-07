@@ -43,10 +43,11 @@
 
   8. Inside user.component.html
   ```
-	  <p>user works!</p>
-    <h1 class="some">User</h1>
+  <p>user works!</p>
+  <h1 class="some">User</h1>
   ```
   9.  For running the test cases-
+  
 	 **ng test** 
 
  

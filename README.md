@@ -48,7 +48,7 @@
   ```
   9.  For running the test cases-
   
-	 **ng test** 
+	 ng test
 
  
 

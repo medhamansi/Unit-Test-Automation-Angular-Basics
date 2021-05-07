@@ -1,27 +1,46 @@
-# AppTesting
+## AppTesting
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+#UNIT TEST AUTOMATION IN ANGULAR
 
-## Development server
+1.Create a new app – ng new app-testing
+2.cd app-testing
+3.ng serve -o
+4.In the app.component.spec.ts file there are some already defined Unit Test cases in Jasmine.
+  Jasmine is a JS library/framework for unit testing.
+5. To check our own test cases, we will create another component say -USER
+    ng g c user
+6.Inside user.component.ts we will write-
+export class UserComponent implements OnInit {
+  componentName="user"
+	  constructor() { }
+	
+	  ngOnInit(): void {
+	  }
+	    sum(a,b){
+	      return a+b
+	    }
+	}
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+7. Inside user.component.spec.ts we will write –
+	it("testing title",()=>{
+    expect(component.componentName).toBe("user")
+  })
 
-## Code scaffolding
+  it("testing sum function",()=>{
+    expect(component.sum(40,60)).toBe(100)
+  })
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  it("Testing HTML element",()=>{
+    const data=fixture.nativeElement;
+    expect(data.querySelector(".some").textContent).toContain("User")
+  })
 
-## Build
+8. Inside user.component.html
+	<p>user works!</p>
+<h1 class="some">User</h1>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+9. For running the test cases-
+	ng test 
 
-## Running unit tests
+ 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

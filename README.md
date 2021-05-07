@@ -7,8 +7,12 @@
 3.  ***ng serve -o***
 4.  In the app.component.spec.ts file there are some already defined Unit Test cases in Jasmine.
     Jasmine is a JS library/framework for unit testing.
-5. To check our own test cases, we will create another component say -USER
-    ***ng g c user***
+5. To check our own test cases, we will create another component say - USER
+  ```
+    ng g c user
+    
+    ```
+    
 6.  Inside ***user.component.ts*** -
   ```
    export class UserComponent implements OnInit {
